@@ -1,484 +1,494 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS: style nền và CSS từng section -->
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
     <title>Reanty</title>
 </head>
 <body>
-    <!-- Top bar: thông tin liên hệ và mạng xã hội -->
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-bar-info">
-                <div class="email-info">
-                    <img src="./assets/icons/mail.svg">
-                    <p>Info@webmail.com</p>
+    <div class="header-sticky">
+        <div class="top-bar">
+            <div class="container top-bar-inner">
+                <div class="top-bar-info">
+                    <div class="email-info">
+                        <img src="./assets/icons/mail.svg">
+                        <p>Info@webmail.com</p>
+                    </div>
+                    <div class="location-info">
+                        <img src="./assets/icons/location.svg">
+                        <p>547 ns tower St.anglo City, USA</p>
+                    </div>
                 </div>
-                <div class="location-info">
-                    <img src="./assets/icons/location.svg">
-                    <p>547 ns tower St.anglo City, USA</p>
-                </div>
-            </div>
 
-            <div class="social-icons">
-                <a href="#"><img src="./assets/icons/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="./assets/icons/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="./assets/icons/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="./assets/icons/youtube.svg" alt="YouTube"></a>
-                <a href="#"><img src="./assets/icons/pinterest.svg" alt="Pinterest"></a>
+                <div class="social-icons">
+                    <a href="#"><img src="./assets/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="./assets/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/icons/youtube.svg" alt="YouTube"></a>
+                    <a href="#"><img src="./assets/icons/pinterest.svg" alt="Pinterest"></a>
+                </div>
             </div>
         </div>
+
+        <header class="navbar">
+            <div class="container navbar-inner">
+                <div class="logo">
+                <img src="./assets/images/logo.svg" alt="Logo">
+                </div>
+
+                <button class="mobile-toggle" type="button" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </button>
+
+                <div class="mobile-menu">
+                    <nav class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#feature">Feature</a>
+                    <a href="#market">Market</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    </nav>
+
+                    <div class="nav-actions">
+                    <a href="#" class="login-link">Log In</a>
+                    <a href="#" class="signup-btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
     </div>
 
-    <!-- Header chính: logo, menu điều hướng và nút đăng nhập/đăng ký -->
-    <header class="navbar">
-        <div class="container navbar-inner">
-            <div class="logo">
-                <img src="./assets/images/logo.svg" alt="Logo">
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h1>Find the best real estate in your country.</h1>
+                <img src="./assets/icons/hero-arrow.svg" alt="" class="hero-vector">
+                <p>Over 1 million homes for sale — find the perfect place to call your own.</p>
+
+                <a href="#" class="hero-btn">Start membership <span>›</span></a>
             </div>
 
-            <nav class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Feature</a>
-                <a href="#">Market</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </nav>
+            <div class="hero-gallery">
+                <img src="./assets/icons/hero-slider.svg" alt="House preview slider">
+            </div>
 
-            <div class="nav-actions">
-                <a href="#" class="login-link">Log In</a>
-                <a href="#" class="signup-btn">Sign Up</a>
+            <div class="hero-visual">
+                <div class="hero-main-image"></div>
+
+                <div class="revenue-card">
+                    <img src="./assets/icons/revenue-growth.svg" alt="Revenue Icon" class="revenue-icon">
+                    <strong>$7454.21</strong>
+                    <span>Revenue</span>
+                </div>
+
+                <a href="#" class="how-it-works">
+                    <span>How it works</span>
+                    <img src="./assets/icons/play.svg" alt="Play Icon" class="play-icon">
+                </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Nội dung chính của trang -->
-    <main>
-        <!-- Hero section: tiêu đề, CTA và ảnh chính -->
-    <section class="hero">
-            <div class="container hero-inner">
-                <div class="hero-content">
-                    <h1>Find the best Real Estate on your country .</h1>
-                    <img src="./assets/icons/hero-arrow.svg" alt="" class="hero-vector">
-                    <p>With over 1 million homes for sale available on the website, Renting can match you with a house.</p>
-
-                    <a href="#" class="hero-btn">Start membership <span>›</span></a>
-                </div>
-
-                <div class="hero-gallery">
-                    <img src="./assets/icons/hero-slider.svg" alt="House preview slider">
-                </div>
-
-                <div class="hero-visual">
-                    <div class="hero-main-image"></div>
-
-                    <div class="revenue-card">
-                        <img src="./assets/icons/revenue-growth.svg" alt="Revenue Icon" class="revenue-icon">
-                        <strong>$7454.21</strong>
-                        <span>Revenue</span>
-                    </div>
-
-                    <a href="#" class="how-it-works">
-                        <span>How it works</span>
-                        <img src="./assets/icons/play.svg" alt="Play Icon" class="play-icon">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Guide section: thẻ buyer, renter và seller -->
     <section class="guide-section">
-            <div class="guide-container">
-                <div class="guide-heading">
-                    <h2>Commercial Real Estate And Office</h2>
-                    <p>Work with Renting brokers who help you to get started with smart tools to.</p>
+        <div class="guide-container">
+            <div class="guide-heading">
+                <h2>Commercial Real Estate & Office</h2>
+                <p>Work with experienced brokers who help you find the right property with smart tools.</p>
+            </div>
+
+            <div class="guide-cards">
+                <article class="guide-card" role="button" tabindex="0" aria-pressed="false">
+                    <img src="./assets/icons/buyer.svg" data-default-icon="./assets/icons/buyer.svg" data-active-icon="./assets/icons/buyer-active.svg" alt="Buyer Guides" class="guide-card-icon">
+                    <h3>Buyer Guides</h3>
+                    <p>Turn valuable leads into long-term customers with expert guidance.</p>
+                </article>
+
+                <article class="guide-card is-active" role="button" tabindex="0" aria-pressed="true">
+                    <img src="./assets/icons/renter-active.svg" data-default-icon="./assets/icons/renter.svg" data-active-icon="./assets/icons/renter-active.svg" alt="Renter Guides" class="guide-card-icon">
+                    <h3>Renter Guides</h3>
+                    <p>Build brand awareness on the top social media networks.</p>
+                </article>
+
+                <article class="guide-card" role="button" tabindex="0" aria-pressed="false">
+                    <img src="./assets/icons/seller.svg" data-default-icon="./assets/icons/seller.svg" data-active-icon="./assets/icons/seller-active.svg" alt="Seller Guides" class="guide-card-icon">
+                    <h3>Seller Guides</h3>
+                    <p>Get professional content that attracts qualified buyers and closes deals.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-media">
+                <div class="about-image about-image-back"></div>
+                <div class="about-image about-image-front"></div>
+
+                <div class="rating-card">
+                    <img src="./assets/icons/rating-star-large.svg" alt="Star Rating">
+                    <span>5 Star Rating</span>
                 </div>
+            </div>
 
-                <div class="guide-cards">
-                    <article class="guide-card">
-                        <img src="./assets/icons/buyer.svg" alt="Buyer Guides" class="guide-card-icon">
-                        <h3>Buyer Guides</h3>
-                        <p>Nurture valuable leads into customers, and turn one time.</p>
+            <div class="about-content">
+                <h2>Dream Living Spaces Setting New Build</h2>
+                <p class="about-lead">Explore our curated collection of premium properties designed for modern living.</p>
+
+                <div class="about-features">
+                    <article class="about-feature about-feature-highlight">
+                        <img src="./assets/icons/feature-residence.svg" alt="Home Icon">
+                        <div>
+                            <h3>The Perfect Residence</h3>
+                            <p>Browse photos and take a deep dive into your future neighborhood.</p>
+                        </div>
                     </article>
 
-                    <article class="guide-card guide-card-featured">
-                        <img src="./assets/icons/renter.svg" alt="Renter Guides" class="guide-card-icon">
-                        <h3>Renter Guides</h3>
-                        <p>Build brand awareness on the top social media networks.</p>
+                    <article class="about-feature about-feature-highlight">
+                        <img src="./assets/icons/feature-architect.svg" alt="Architect Icon">
+                        <div>
+                            <h3>Global Architect Experts</h3>
+                            <p>Work with world-class architects to design your dream home.</p>
+                        </div>
                     </article>
 
-                    <article class="guide-card">
-                        <img src="./assets/icons/seller.svg" alt="Seller Guides" class="guide-card-icon">
-                        <h3>Seller Guides</h3>
-                        <p>Get professionally-written content that attracts qualified.</p>
+                    <article class="about-feature about-feature-highlight">
+                        <img src="./assets/icons/feature-storage.svg" alt="Location Icon">
+                        <div>
+                            <h3>Built-in Storage Capable</h3>
+                            <p>Smart storage solutions designed to maximize every square foot.</p>
+                        </div>
                     </article>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About section: giới thiệu và feature item -->
-    <section class="about-section">
-            <div class="about-container">
-                <div class="about-media">
-                    <div class="about-image about-image-back"></div>
-                    <div class="about-image about-image-front"></div>
-
-                    <div class="rating-card">
-                        <img src="./assets/icons/rating-star-large.svg" alt="Star Rating">
-                        <span>5 Star Rating</span>
-                    </div>
+    <section class="today-section" id="market">
+        <div class="today-container">
+            <div class="today-content">
+                <div class="section-label">
+                    <img src="./assets/icons/about-home.svg" alt="About home">
+                    <span>About home</span>
                 </div>
 
-                <div class="about-content">
-                    <h2>Dream Living Spaces Setting New Build</h2>
-                    <p class="about-lead">SeaWire Web is a wireframe kit that has more than 15 popular categories and more than 200 screens</p>
+                <h2>Today's Best Properties</h2>
+                <p class="today-lead">Handpicked listings updated daily — find your match before someone else does.</p>
 
-                    <div class="about-features">
-                        <article class="about-feature">
-                            <img src="./assets/icons/feature-residence.svg" alt="Home Icon">
-                            <div>
-                                <h3>The perfect Rsidencye</h3>
-                                <p>Take a deep dive and browse origin neighborhood photos.</p>
-                            </div>
-                        </article>
+                <ul class="today-list">
+                    <li>Live Music concert at New York</li>
+                    <li>Our best boat Tour is just for you</li>
+                    <li>Live Music concert at New York</li>
+                    <li>Our best boat Tour is just for you</li>
+                    <li>Live Music concert at New York</li>
+                </ul>
 
-                        <article class="about-feature about-feature-highlight">
-                            <img src="./assets/icons/feature-architect.svg" alt="Architect Icon">
-                            <div>
-                                <h3>Global Arhitect Experts</h3>
-                                <p>Take a deep dive and browse origin neighborhood photos.</p>
-                            </div>
-                        </article>
-
-                        <article class="about-feature">
-                            <img src="./assets/icons/feature-storage.svg" alt="Location Icon">
-                            <div>
-                                <h3>Built-in a storage capable</h3>
-                                <p>Take a deep dive and browse origin neighborhood photos.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Today section: nội dung bán nhà và lưới ảnh -->
-    <section class="today-section">
-            <div class="today-container">
-                <div class="today-content">
-                    <div class="section-label">
-                        <img src="./assets/icons/about-home.svg" alt="About home">
-                        <span>About home</span>
-                    </div>
-
-                    <h2>Today Sells Properties</h2>
-                    <p class="today-lead">SeaWire Web is a wireframe kit that has more than 15 popular categories and more than 200 screens</p>
-
-                    <ul class="today-list">
-                        <li>Live Music concert at Newyork</li>
-                        <li>Our best boat Tour is j us t for you</li>
-                        <li>Live Music concert at Newyork</li>
-                        <li>Our best boat Tour is j us t for you</li>
-                        <li>Live Music concert at Newyork</li>
-                    </ul>
-
-                    <div class="today-slider">
-                        <div class="today-preview today-preview-large"><span>HOUSE 1</span></div>
-                        <div class="today-preview today-preview-medium"><span>HOUSE 2</span></div>
-                        <div class="today-preview today-preview-small"><span>HOUSE 3</span></div>
-                        <div class="today-slider-control">
-                            <div class="today-slider-line"><span></span></div>
-                            <div class="today-slider-number">
-                                <strong>1</strong>
-                                <span>2</span>
-                                <span>3</span>
-                            </div>
+                <div class="today-slider">
+                    <div class="today-preview today-preview-large"><span>HOUSE 1</span></div>
+                    <div class="today-preview today-preview-medium"><span>HOUSE 2</span></div>
+                    <div class="today-preview today-preview-small"><span>HOUSE 3</span></div>
+                    <div class="today-slider-control">
+                        <div class="today-slider-line"><span></span></div>
+                        <div class="today-slider-number">
+                            <strong>1</strong>
+                            <span>2</span>
+                            <span>3</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="today-images">
-                    <div class="today-image today-image-main"></div>
-                    <div class="today-image today-image-top"></div>
-                    <div class="today-image today-image-bottom"></div>
-                </div>
             </div>
-        </section>
-        <!-- Services section: danh sách dịch vụ -->
+
+            <div class="today-images">
+                <div class="today-image today-image-main"></div>
+                <div class="today-image today-image-top"></div>
+                <div class="today-image today-image-bottom"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="services-section" id="services">
-            <div class="services-container">
-                <div class="services-header">
-                    <h2>Services provide for you</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                </div>
-
-                <div class="services-grid">
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <img src="./assets/icons/bedroom.svg" alt="Bed Rooms">
-                        </div>
-                        <h3>Bed Rooms</h3>
-                        <p>Desktop publishing software like aldus page maker including</p>
-                        <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <img src="./assets/icons/swimming-pool.svg" alt="Swimming pool">
-                        </div>
-                        <h3>Swimming pool</h3>
-                        <p>React creative agency amet, consec tetur adipiscing elit.</p>
-                        <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <img src="./assets/icons/copywriting.svg" alt="Copywriting content">
-                        </div>
-                        <h3>Copywriting content</h3>
-                        <p>The standard chunk of used since the 1500s is reproduced</p>
-                        <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <img src="./assets/icons/smart-home.svg" alt="Smart Home">
-                        </div>
-                        <h3>Smart Home</h3>
-                        <p>The standard chunk of used since the 1500s is reproduced</p>
-                        <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <img src="./assets/icons/library-area.svg" alt="Libarary area">
-                        </div>
-                        <h3>Libarary area</h3>
-                        <p>Desktop publishing software like aldus page maker including</p>
-                        <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <img src="./assets/icons/responsive-duty.svg" alt="Responsive Duity">
-                        </div>
-                        <h3>Responsive Duity</h3>
-                        <p>React creative agency amet, consec tetur adipiscing elit.</p>
-                        <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-                </div>
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services We Provide</h2>
+                <p>From buying to selling, we offer everything you need to make confident real estate decisions.</p>
             </div>
-        </section>
-        <!-- Featured section: tab và thẻ bất động sản -->
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <img src="./assets/icons/bedroom.svg" alt="Bed Rooms">
+                    </div>
+                    <h3>Bed Rooms</h3>
+                    <p>Comfortable bedrooms designed with premium finishes and natural lighting.</p>
+                    <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <img src="./assets/icons/swimming-pool.svg" alt="Swimming pool">
+                    </div>
+                    <h3>Swimming Pool</h3>
+                    <p>Resort-style pools with pristine surroundings for year-round enjoyment.</p>
+                    <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <img src="./assets/icons/copywriting.svg" alt="Copywriting content">
+                    </div>
+                    <h3>Copywriting Content</h3>
+                    <p>Professional property descriptions that captivate buyers and boost listings.</p>
+                    <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <img src="./assets/icons/smart-home.svg" alt="Smart Home">
+                    </div>
+                    <h3>Smart Home</h3>
+                    <p>Cutting-edge home automation for security, comfort, and energy efficiency.</p>
+                    <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <img src="./assets/icons/library-area.svg" alt="Library area">
+                    </div>
+                    <h3>Library Area</h3>
+                    <p>Quiet, well-appointed library spaces perfect for reading and remote work.</p>
+                    <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <img src="./assets/icons/responsive-duty.svg" alt="Responsive Service">
+                    </div>
+                    <h3>Responsive Service</h3>
+                    <p>Fast response times and dedicated support whenever you need assistance.</p>
+                    <a href="#">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </article>
+            </div>
+        </div>
+    </section>
     <section class="featured-section" id="feature">
-            <div class="featured-container">
-                <div class="featured-header">
-                    <div class="featured-copy">
-                        <h2>Featured Property</h2>
-                        <p>Find your suitable house here and stay safe and relaxe with pleasure</p>
-                    </div>
-                    <div class="featured-tabs" aria-label="Property categories">
-                        <button class="featured-tab active" type="button">Appartment</button>
-                        <button class="featured-tab" type="button">Vila</button>
-                        <button class="featured-tab" type="button">Land</button>
-                    </div>
+        <div class="featured-container">
+            <div class="featured-header">
+                <div class="featured-copy">
+                    <h2>Featured Properties</h2>
+                    <p>Handpicked listings that combine comfort, style, and great location.</p>
                 </div>
-
-                <div class="property-grid">
-                    <article class="property-card active">
-                        <div class="property-image"></div>
-                        <div class="property-info">
-                            <h3>The Stokes Appartment</h3>
-                            <p class="property-address"><img src="./assets/icons/map.svg" alt=""> Cleveland, United States</p>
-                            <strong>$2,32,120</strong>
-                        </div>
-                        <a class="property-arrow" href="#" aria-label="View The Stokes Appartment">&rarr;</a>
-                    </article>
-
-                    <article class="property-card">
-                        <div class="property-image"></div>
-                        <div class="property-info">
-                            <h3>The Stokes Appartment</h3>
-                            <p class="property-address"><img src="./assets/icons/map.svg" alt=""> Cleveland, United States</p>
-                            <strong>$2,32,120</strong>
-                        </div>
-                        <a class="property-arrow" href="#" aria-label="View The Stokes Appartment">&rarr;</a>
-                    </article>
-
-                    <article class="property-card">
-                        <div class="property-image"></div>
-                        <div class="property-info">
-                            <h3>The Stokes Appartment</h3>
-                            <p class="property-address"><img src="./assets/icons/map.svg" alt=""> Cleveland, United States</p>
-                            <strong>$2,32,120</strong>
-                        </div>
-                        <a class="property-arrow" href="#" aria-label="View The Stokes Appartment">&rarr;</a>
-                    </article>
+                <div class="featured-tabs" aria-label="Property categories">
+                    <button class="featured-tab active" type="button">Apartment</button>
+                    <button class="featured-tab" type="button">Villa</button>
+                    <button class="featured-tab" type="button">Land</button>
                 </div>
-
-                <a href="#" class="featured-button">Explore Property</a>
             </div>
-        </section>
-        <!-- Unit section: banner nền, thẻ giá và badge Unit No. 9A -->
+
+            <div class="property-grid">
+                <article class="property-card">
+                    <div class="property-image"></div>
+                    <div class="property-info">
+                        <h3></h3>
+                        <p class="property-address">
+                            <img src="./assets/icons/map.svg" alt="">
+                            <span></span>
+                        </p>
+                        <strong></strong>
+                    </div>
+                    <a class="property-arrow" href="#" aria-label="View The Stokes Appartment">&rarr;</a>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image"></div>
+                    <div class="property-info">
+                        <h3></h3>
+                        <p class="property-address">
+                            <img src="./assets/icons/map.svg" alt="">
+                            <span></span>
+                        </p>
+                        <strong></strong>
+                    </div>
+                    <a class="property-arrow" href="#" aria-label="View The Stokes Appartment">&rarr;</a>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image"></div>
+                    <div class="property-info">
+                        <h3></h3>
+                        <p class="property-address">
+                            <img src="./assets/icons/map.svg" alt="">
+                            <span></span>
+                        </p>
+                        <strong></strong>
+                    </div>
+                    <a class="property-arrow" href="#" aria-label="View The Stokes Appartment">&rarr;</a>
+                </article>
+            </div>
+
+            <a href="#" class="featured-button">Explore Property</a>
+        </div>
+    </section>
+
     <section class="stats-section unit-section" aria-label="Unit No. 9A">
-            <div class="unit-background">
-                <div class="unit-container">
-                    <div class="unit-card">
-                        <div class="unit-image-wrap">
-                            <img class="unit-image" src="./assets/images/unit-house.jpg" alt="House unit preview">
-                            <span class="unit-coin"><img src="./assets/icons/coin.svg" alt=""></span>
-                        </div>
-                        <div class="unit-info">
-                            <strong>$4,000</strong>
-                            <p>242 Metric way</p>
-                            <div class="unit-meta" aria-label="Unit details">
-                                <span><span class="unit-meta-icon"><img src="./assets/icons/bedroom.svg" alt=""></span>2</span>
-                                <span><span class="unit-meta-icon"><img src="./assets/icons/swimming-pool.svg" alt=""></span>2</span>
-                                <span><span class="unit-meta-icon"><img src="./assets/icons/copywriting.svg" alt=""></span>500sqf</span>
-                            </div>
-                        </div>
+        <div class="unit-background">
+            <div class="unit-container">`
+                <div class="unit-card">
+                    <div class="unit-image-wrap">
+                        <img class="unit-image" src="./assets/images/unit-house.jpg" alt="House unit preview">
+                        <span class="unit-coin"><img src="./assets/icons/coin.svg" alt=""></span>
                     </div>
-
-                    <div class="unit-badge">
-                        <span>UNIT NO.</span>
-                        <strong>9A</strong>
+                    <div class="unit-info">
+                        <strong>$4,000</strong>
+                        <p>242 Metric way</p>
+                        <div class="unit-meta" aria-label="Unit details">
+                            <span><span class="unit-meta-icon"><img src="./assets/icons/bedroom.svg" alt=""></span>2</span>
+                            <span><span class="unit-meta-icon"><img src="./assets/icons/swimming-pool.svg" alt=""></span>2</span>
+                            <span><span class="unit-meta-icon"><img src="./assets/icons/copywriting.svg" alt=""></span>500sqf</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="unit-badge">
+                    <span>UNIT NO.</span>
+                    <strong>9A</strong>
+                </div>
             </div>
-        </section>
-        <!-- Testimonial section: nhận xét và rating -->
+        </div>
+    </section>
+
     <section class="testimonial-section" id="testimonial">
-            <div class="testimonial-container">
-                <div class="testimonial-header">
-                    <h2>What our customers are saying</h2>
-                    <p>We make sure you have a fine distance with the sickness. We make you never lose hope.</p>
-                </div>
-
-                <div class="testimonial-body">
-                    <button class="testimonial-nav testimonial-prev" type="button" aria-label="Previous testimonial">&larr;</button>
-
-                    <div class="testimonial-visual" aria-hidden="true">
-                        <div class="testimonial-image"></div>
-                    </div>
-
-                    <div class="testimonial-content">
-                        <img class="testimonial-quote" src="./assets/icons/quote-mark.svg" alt="">
-                        <p class="testimonial-text">We make sure you have a fine distance with the sickness. We make you never lose hope. We make sure you have with the sickness.</p>
-                        <div class="testimonial-rating" aria-label="5 star rating">
-                            <img src="./assets/icons/rating-star.svg" alt="">
-                            <img src="./assets/icons/rating-star.svg" alt="">
-                            <img src="./assets/icons/rating-star.svg" alt="">
-                            <img src="./assets/icons/rating-star.svg" alt="">
-                            <img src="./assets/icons/rating-star.svg" alt="">
-                        </div>
-                        <h3>Yunus Seyhan</h3>
-                        <span>Postgraduate Student</span>
-                    </div>
-
-                    <button class="testimonial-nav testimonial-next" type="button" aria-label="Next testimonial">&rarr;</button>
-                </div>
+        <div class="testimonial-container">
+            <div class="testimonial-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real stories from real clients who found their perfect home with us.</p>
             </div>
-        </section>
-        <!-- Projects section: thẻ thành phố và subscribe -->
-    <section class="projects-section" id="projects">
-            <div class="projects-container">
-                <h2>We build more projects successful</h2>
 
-                <div class="projects-cards">
-                    <article class="project-card">
-                        <h3>San Francisco, California</h3>
-                        <a href="#">See more <span aria-hidden="true">&rsaquo;</span></a>
-                    </article>
-                    <article class="project-card project-card-featured">
-                        <h3>Washington DC</h3>
-                        <a href="#">See more <span aria-hidden="true">&rsaquo;</span></a>
-                    </article>
-                    <article class="project-card">
-                        <h3>Chicago</h3>
-                        <a href="#">See more <span aria-hidden="true">&rsaquo;</span></a>
-                    </article>
+            <div class="testimonial-body">
+                <button class="testimonial-nav testimonial-prev" type="button" aria-label="Previous testimonial">&larr;</button>
+
+                <div class="testimonial-visual" aria-hidden="true">
+                    <div class="testimonial-image" data-testimonial="image"></div>
                 </div>
 
-                <form class="subscribe-form" action="#" method="post">
-                    <label class="sr-only" for="project-email">Email</label>
-                    <div class="subscribe-input">
-                        <img src="./assets/icons/email.svg" alt="">
-                        <input id="project-email" type="email" placeholder="Enter your email here">
+                <div class="testimonial-content">
+                    <img class="testimonial-quote" src="./assets/icons/quote-mark.svg" alt="">
+                    <p class="testimonial-text" data-testimonial="text">The team made the entire process smooth and stress-free. I found my dream home in just two weeks — highly recommend!</p>
+                    <div class="testimonial-rating" data-testimonial="rating" aria-label="5 star rating">
+                        <img src="./assets/icons/rating-star.svg" alt="">
+                        <img src="./assets/icons/rating-star.svg" alt="">
+                        <img src="./assets/icons/rating-star.svg" alt="">
+                        <img src="./assets/icons/rating-star.svg" alt="">
+                        <img src="./assets/icons/rating-star.svg" alt="">
                     </div>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </section>
-        <!-- Blog section: các bài viết mới và nút Read All -->
-    <section class="blog-section" id="blog">
-            <div class="blog-container">
-                <div class="blog-header">
-                    <h2>From our blog</h2>
-                    <p>Find your suitable house here and stay safe and relaxe with pleasure</p>
+                    <h3 data-testimonial="name">Yunus Seyhan</h3>
+                    <span data-testimonial="role">Postgraduate student</span>
                 </div>
 
-                <div class="blog-grid">
-                    <article class="blog-card active">
-                        <div class="blog-image"></div>
-                        <div class="blog-content">
-                            <h3>How to rent a home very easily?</h3>
-                            <p class="blog-category"><img src="./assets/icons/bookmark.svg" alt=""> Rentals</p>
-                            <p class="blog-excerpt">How to rent a home very easily in this pandemic situation. You can rent house through using our platfrom...</p>
-                            <div class="blog-meta">
-                                <span><img src="./assets/icons/calendar.svg" alt=""> 3 years ago</span>
-                                <span><img src="./assets/icons/user.svg" alt=""> By <b>Mike Hesson</b></span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image"></div>
-                        <div class="blog-content">
-                            <h3>How to rent a home very easily?</h3>
-                            <p class="blog-category"><img src="./assets/icons/bookmark.svg" alt=""> Rentals</p>
-                            <p class="blog-excerpt">How to rent a home very easily in this pandemic situation. You can rent house through using our platfrom...</p>
-                            <div class="blog-meta">
-                                <span><img src="./assets/icons/calendar.svg" alt=""> 3 years ago</span>
-                                <span><img src="./assets/icons/user.svg" alt=""> By <b>Mike Hesson</b></span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image"></div>
-                        <div class="blog-content">
-                            <h3>How to rent a home very easily?</h3>
-                            <p class="blog-category"><img src="./assets/icons/bookmark.svg" alt=""> Rentals</p>
-                            <p class="blog-excerpt">How to rent a home very easily in this pandemic situation. You can rent house through using our platfrom...</p>
-                            <div class="blog-meta">
-                                <span><img src="./assets/icons/calendar.svg" alt=""> 3 years ago</span>
-                                <span><img src="./assets/icons/user.svg" alt=""> By <b>Mike Hesson</b></span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <a class="blog-button" href="#">Read All</a>
+                <button class="testimonial-nav testimonial-next" type="button" aria-label="Next testimonial">&rarr;</button>
             </div>
-        </section>
-        <!-- Contact section: nội dung giới thiệu và form liên hệ -->
+        </div>
+    </section>
+
+        <section class="projects-section" id="projects">
+        <div class="projects-container">
+            <h2>We Build Successful Projects</h2>
+
+            <div class="projects-cards">
+                <article class="project-card">
+                    <h3>San Francisco, California</h3>
+                    <a href="#">See more <span aria-hidden="true">&rsaquo;</span></a>
+                </article>
+                <article class="project-card project-card-featured">
+                    <h3>Washington DC</h3>
+                    <a href="#">See more <span aria-hidden="true">&rsaquo;</span></a>
+                </article>
+                <article class="project-card">
+                    <h3>Chicago</h3>
+                    <a href="#">See more <span aria-hidden="true">&rsaquo;</span></a>
+                </article>
+            </div>
+
+            <form class="subscribe-form" action="#" method="post">
+                <div class="subscribe-input">
+                    <img src="./assets/icons/email.svg" alt="">
+                    <input id="project-email" type="email" placeholder="Enter your email here">
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+        <section class="blog-section" id="blog">
+        <div class="blog-container">
+            <div class="blog-header">
+                <h2>From Our Blog</h2>
+                <p>Tips, guides, and insights to help you navigate the real estate market.</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <h3>How to Rent a Home Easily</h3>
+                        <p class="blog-category"><img src="./assets/icons/bookmark.svg" alt=""> Rentals</p>
+                        <p class="blog-excerpt">A step-by-step guide to renting your dream home — from searching to signing the lease.</p>
+                        <div class="blog-meta">
+                            <span><img src="./assets/icons/calendar.svg" alt=""> 2 weeks ago</span>
+                            <span><img src="./assets/icons/user.svg" alt=""> By <b>Sarah Chen</b></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <h3>Top 5 Features Buyers Look For</h3>
+                        <p class="blog-category"><img src="./assets/icons/bookmark.svg" alt=""> Buying</p>
+                        <p class="blog-excerpt">Discover the most sought-after amenities that add real value to a property listing.</p>
+                        <div class="blog-meta">
+                            <span><img src="./assets/icons/calendar.svg" alt=""> 1 month ago</span>
+                            <span><img src="./assets/icons/user.svg" alt=""> By <b>James Park</b></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <h3>First-Time Homeowner Tips</h3>
+                        <p class="blog-category"><img src="./assets/icons/bookmark.svg" alt=""> Guides</p>
+                        <p class="blog-excerpt">Everything you need to know before buying your first home — from budget to closing.</p>
+                        <div class="blog-meta">
+                            <span><img src="./assets/icons/calendar.svg" alt=""> 3 weeks ago</span>
+                            <span><img src="./assets/icons/user.svg" alt=""> By <b>Lisa Tran</b></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <a class="blog-button" href="#">Read All</a>
+        </div>
+    </section>
+
     <section class="contact-section" id="contact">
             <div class="contact-container">
                 <div class="contact-header">
-                    <span>Contact with us</span>
-                    <h2>Looking For To Buy A Property?</h2>
+                    <span>Contact Us</span>
+                    <h2>Looking to Buy a Property?</h2>
                 </div>
 
                 <div class="contact-layout">
                     <div class="contact-info">
-                        <p class="contact-description">Browse our property listing and find your best and suitable home or house for sale, rent and buying. It’s so easy and fast.</p>
+                        <p class="contact-description">Browse our property listings and find your ideal home for sale or rent. It's fast, easy, and stress-free.</p>
 
                         <ul class="contact-list">
-                            <li><img src="./assets/icons/tick.svg" alt=""> Archit ecto beatae vitae dicta sunt</li>
-                            <li><img src="./assets/icons/tick.svg" alt=""> Largest global RealEstate market</li>
-                            <li><img src="./assets/icons/tick.svg" alt=""> Nor again is there anyone</li>
+                            <li><img src="./assets/icons/tick.svg" alt=""> Extensive listings across prime locations</li>
+                            <li><img src="./assets/icons/tick.svg" alt=""> Largest global real estate network</li>
+                            <li><img src="./assets/icons/tick.svg" alt=""> Dedicated support from start to close</li>
                         </ul>
 
                         <div class="contact-visual" aria-hidden="true">
@@ -505,10 +515,8 @@
                     </form>
                 </div>
             </div>
-        </section>
-    </main>
+    </section>
 
-    <!-- Footer section: logo, sitemap và newsletter -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -525,7 +533,7 @@
 
             <nav class="footer-column" aria-label="Company links">
                 <h3>Company</h3>
-                <a href="#">About</a>
+                <a href="#about">About</a>
                 <a href="#">Careers</a>
                 <a href="#">Mobile</a>
                 <a href="#">Blog</a>
@@ -537,7 +545,7 @@
                 <a href="#">Help/FAQ</a>
                 <a href="#">Press</a>
                 <a href="#">Affiliates</a>
-                <a href="#">Propert owners</a>
+                <a href="#">Property owners</a>
                 <a href="#">Partners</a>
             </nav>
 
@@ -556,7 +564,7 @@
                     <p>Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22, Charlottesville, CA 45565</p>
                 </div>
                 <form class="footer-newsletter" action="#" method="post">
-                    <label for="footer-email">News letter</label>
+                    <label for="footer-email">Newsletter</label>
                     <div class="footer-newsletter-input">
                         <input id="footer-email" type="email" placeholder="Enter your email address">
                         <button type="submit" aria-label="Submit newsletter"><img src="./assets/icons/email.svg" alt=""></button>
@@ -574,24 +582,6 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

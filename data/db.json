@@ -1,6 +1,64 @@
 {
-  "note": "Mock data for static HTML/CSS landing page.",
-  "properties": [],
-  "services": [],
-  "blogs": []
+  "apartment": [
+    {
+      "title": "The Stokes Apartment",
+      "address": "Cleveland, United States",
+      "price": "$232,120",
+      "image": "./assets/images/apartment1.jpg"
+    },
+    {
+      "title": "Modern Apartment",
+      "address": "New York, United States",
+      "price": "$310,000",
+      "image": "./assets/images/apartment2.jpg"
+    },
+    {
+      "title": "Luxury Apartment",
+      "address": "California, United States",
+      "price": "$480,000",
+      "image": "./assets/images/apartment3.jpg"
+    }
+  ],
+
+  "villa": [
+    {
+      "title": "Luxury Villa",
+      "address": "Miami, United States",
+      "price": "$760,000",
+      "image": "./assets/images/villa1.jpg"
+    },
+    {
+      "title": "Sea View Villa",
+      "address": "Los Angeles, United States",
+      "price": "$890,000",
+      "image": "./assets/images/villa2.jpg"
+    },
+    {
+      "title": "Modern Villa",
+      "address": "Texas, United States",
+      "price": "$640,000",
+      "image": "./assets/images/villa3.jpg"
+    }
+  ],
+
+  "land": [
+    {
+      "title": "Residential Land",
+      "address": "Arizona, United States",
+      "price": "$120,000",
+      "image": "./assets/images/land1.jpg"
+    },
+    {
+      "title": "Commercial Land",
+      "address": "Florida, United States",
+      "price": "$260,000",
+      "image": "./assets/images/land2.jpg"
+    },
+    {
+      "title": "Farm Land",
+      "address": "Nevada, United States",
+      "price": "$98,000",
+      "image": "./assets/images/land3.jpg"
+    }
+  ]
 }

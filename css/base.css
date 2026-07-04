@@ -1,8 +1,9 @@
-/* Style nền và thành phần dùng chung */
-/* File này chứa reset, container và các helper dùng chung cho toàn trang. */
-
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -26,4 +27,5 @@ img {
   width: min(100% - 32px, 1428px);
   margin-inline: auto;
 }
+
 

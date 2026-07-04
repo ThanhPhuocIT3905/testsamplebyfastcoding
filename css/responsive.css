@@ -1,147 +1,285 @@
-/* Responsive tổng hợp */
-/* File này chứa các override cuối cùng cho tablet và smartphone.
-   Mục tiêu: giữ layout PC theo Figma, nhưng khi xuống SP thì các section chuyển về 1 cột,
-   bỏ kích thước cố định quá lớn và tránh tràn ngang màn hình. */
-
 @media (max-width: 900px) {
-  /* Header responsive: top-bar và navbar được phép xuống dòng để không bị tràn ngang. */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
   .top-bar {
     height: auto;
     padding: 8px 0;
   }
 
   .top-bar-inner {
-    min-height: 32px;
     flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .top-bar-info {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 18px;
+    align-items: center;
+    gap: 10px;
     text-align: center;
+    padding: 10px 0;
   }
 
   .social-icons {
     justify-content: center;
   }
 
+  .top-bar-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
   .navbar {
     height: auto;
-    padding: 18px 0 22px;
+    padding: 16px 0;
   }
 
   .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav-links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  .nav-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    overflow: hidden;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+    max-width: 100%;
+  }
+
+
+  .navbar {
+    height: auto;
+    padding: 0;
+    background: #fff;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .navbar-inner {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0 22px;
+  }
+  
+
+  .logo {
+    padding: 16px 0;
+  }
+
+  .logo img {
+    width: 130px;
+    height: auto;
+  }
+
+  .mobile-toggle {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 18px;
+    gap: 5px;
+    width: 34px;
+    height: 34px;
+    margin-right: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #071c1f;
+    border-radius: 999px;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    display: none;
+    padding: 40px 24px 48px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .navbar.active .mobile-menu {
+    display: block;
+  }
+
+  .navbar.active .mobile-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar.active .mobile-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar.active .mobile-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .mobile-toggle span {
+    transition: 0.25s ease;
   }
 
   .nav-links {
     width: 100%;
     margin-left: 0;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px 24px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .nav-links a.active::after {
+    display: none;
   }
 
   .nav-actions {
+    width: 100%;
+    margin: 0;
+    padding: 28px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Reset responsive chung: khóa tràn ngang do các block absolute/fixed-width từ desktop. */
-  html,
-  body {
-    overflow-x: hidden;
+    border-top: 1px solid #eeeeee;
   }
 
-  .container {
-    width: min(100% - 32px, 100%);
+  .login-link {
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  section {
-    overflow: hidden;
+  .signup-btn {
+    width: 100%;
+    max-width: 280px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
   }
 
-  /* Hero responsive: chuyển thành 1 cột, ảnh nằm dưới nội dung và mũi tên không đè chữ trên SP. */
   .hero {
     min-height: auto;
   }
 
   .hero-inner {
-    display: block;
+    display: flex;
+    flex-direction: column;
     min-height: auto;
-    padding-block: 48px 64px;
+    padding: 40px 0 64px;
   }
 
   .hero-content {
+    width: 100%;
     padding-top: 0;
+    text-align: left;
   }
 
   .hero-content h1 {
     max-width: 100%;
-    margin-bottom: 22px;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 18px;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 24px;
   }
 
   .hero-vector {
     display: none;
   }
 
-  .hero-content p {
-    max-width: 100%;
-    margin-bottom: 24px;
-  }
-
   .hero-btn {
-    width: 190px;
-    height: 54px;
+    width: 170px;
+    height: 52px;
   }
 
   .hero-visual {
     position: relative;
-    top: auto;
-    right: auto;
+    inset: auto;
     width: 100%;
-    height: 320px;
-    margin: 36px 0 0;
+    height: 300px;
+    margin-top: 36px;
   }
 
   .revenue-card {
-    left: 16px;
-    bottom: -42px;
-    width: 176px;
-    height: 124px;
-    padding: 18px;
+    left: 12px;
+    bottom: -28px;
+    width: 155px;
+    height: auto;
+    padding: 14px;
     border-radius: 14px;
   }
 
   .revenue-card strong {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 28px;
   }
 
   .revenue-card span {
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
   }
 
   .how-it-works {
-    right: 0;
-    bottom: 0;
+    right: 8px;
+    bottom: 8px;
+    width: 145px;
+    height: 56px;
   }
 
   .hero-gallery {
-    width: min(100%, 360px);
-    margin-top: 76px;
+    width: 100%;
+    max-width: 340px;
+    margin: 70px auto 0;
   }
 
-  /* Guide/About/Today: các cụm nhiều cột chuyển về một cột để dễ đọc trên smartphone. */
   .guide-section,
   .about-section,
   .today-section,
@@ -151,8 +289,8 @@
   .projects-section,
   .blog-section,
   .contact-section {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .guide-heading h2,
@@ -164,97 +302,32 @@
   .projects-container h2,
   .blog-header h2,
   .contact-header h2 {
-    font-size: 34px;
-    line-height: 42px;
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .about-container,
   .today-container,
-  .contact-layout {
-    width: min(100% - 32px, 100%);
+  .contact-layout,
+  .testimonial-body {
+    width: calc(100% - 28px);
+    max-width: 100%;
+    margin-inline: auto;
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 36px;
     min-height: auto;
   }
 
-  .about-media {
-    width: min(100%, 390px);
-    height: 420px;
-    margin-inline: auto;
-  }
-
-  .about-image-back {
-    width: 235px;
-    height: 360px;
-  }
-
-  .about-image-front {
-    left: 74px;
-    top: 34px;
-    width: 240px;
-    height: 372px;
-  }
-
-  .rating-card {
-    top: 18px;
-    right: 0;
-    width: 104px;
-    height: 104px;
-  }
-
-  .about-feature,
-  .about-feature-highlight {
-    width: 100%;
-    margin-left: 0;
-    grid-template-columns: 46px 1fr;
-    column-gap: 14px;
-  }
-
-  .about-feature-highlight {
-    padding: 24px 18px;
-  }
-
-  .about-feature h3 {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .today-slider {
-    width: min(100%, 360px);
-    transform: none;
-  }
-
-  .today-preview-large {
-    width: 112px;
-  }
-
-  .today-preview-medium {
-    left: 112px;
-  }
-
-  .today-preview-small {
-    left: 220px;
-  }
-
-  .today-slider-control {
-    right: 0;
-  }
-
-  .today-images {
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 220px);
-    height: auto;
-  }
-
-  /* Services/featured/blog/projects: card stack 1 cột, không giữ width desktop. */
   .guide-cards,
   .services-grid,
   .property-grid,
   .projects-cards,
   .blog-grid {
-    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    grid-template-columns: 1fr;
     justify-items: center;
+    gap: 24px;
   }
 
   .guide-card,
@@ -263,33 +336,120 @@
   .project-card,
   .blog-card {
     width: 100%;
-    max-width: 370px;
+    max-width: 360px;
+  }
+
+  .about-media {
+    width: 100%;
+    max-width: 350px;
+    height: 360px;
+    margin-inline: auto;
+  }
+
+  .about-image-back {
+    width: 200px;
+    height: 305px;
+  }
+
+  .about-image-front {
+    left: 60px;
+    top: 32px;
+    width: 215px;
+    height: 320px;
+  }
+
+  .rating-card {
+    top: 16px;
+    right: 0;
+    width: 88px;
+    height: 88px;
+  }
+
+  .about-feature,
+  .about-feature-highlight {
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: 42px 1fr;
+    column-gap: 14px;
+  }
+
+  .about-feature-highlight {
+    padding: 22px 16px;
+  }
+
+  .about-feature h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .today-slider {
+    width: 100%;
+    max-width: 330px;
+    height: 86px;
+    transform: none;
+  }
+
+  .today-preview-large {
+    width: 100px;
+    height: 86px;
+  }
+
+  .today-preview-medium {
+    left: 100px;
+    top: 18px;
+    width: 92px;
+    height: 68px;
+  }
+
+  .today-preview-small {
+    left: 192px;
+    top: 30px;
+    width: 74px;
+    height: 56px;
+  }
+
+  .today-slider-control {
+    right: 0;
+    gap: 10px;
+  }
+
+  .today-slider-line {
+    width: 42px;
+  }
+
+  .today-images {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 210px);
+    gap: 16px;
   }
 
   .featured-header {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .featured-tabs {
-    gap: 28px;
-    padding-bottom: 10px;
+    width: 100%;
     overflow-x: auto;
+    gap: 24px;
+    padding-bottom: 10px;
     -webkit-overflow-scrolling: touch;
   }
 
   .property-info {
-    width: calc(100% - 72px);
+    width: calc(100% - 64px);
   }
 
   .property-arrow {
     right: 0;
   }
 
-  /* Unit card: card giá thu nhỏ lại theo màn hình, badge nằm giữa phía dưới như bản mobile. */
   .unit-background {
     height: auto;
-    min-height: 520px;
-    padding: 72px 16px 112px;
+    min-height: 500px;
+    padding: 64px 14px 110px;
   }
 
   .unit-container {
@@ -300,63 +460,81 @@
     position: relative;
     top: auto;
     left: auto;
-    width: min(100%, 380px);
+    width: 100%;
+    max-width: 340px;
     height: auto;
     margin: 0 auto;
+    padding: 14px;
     transform: none;
+    align-items: flex-start;
+  }
+
+  .unit-image-wrap {
+    width: 84px;
+    height: 84px;
+    flex: 0 0 84px;
+  }
+
+  .unit-info {
+    margin-left: 14px;
+  }
+
+  .unit-info strong {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .unit-meta {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .unit-badge {
     left: 50%;
-    bottom: 0;
+    top: 100%;
     transform: translate(-50%, 58%);
   }
 
-  /* Testimonial: phần ảnh và nội dung xếp dọc để nút điều hướng không che layout. */
   .testimonial-container {
     min-height: auto;
   }
 
-  .testimonial-body {
-    grid-template-columns: 1fr;
-    gap: 38px;
-    min-height: auto;
-  }
-
   .testimonial-visual {
-    width: min(100%, 403px);
-    height: 390px;
+    width: 100%;
+    max-width: 360px;
+    height: 350px;
+    margin-inline: auto;
   }
 
   .testimonial-visual::before,
   .testimonial-image {
-    width: calc(100% - 24px);
-    height: 360px;
+    width: calc(100% - 20px);
+    height: 320px;
   }
 
   .testimonial-content {
     width: 100%;
-    max-width: 450px;
+    max-width: 100%;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+    line-height: 1.8;
   }
 
   .testimonial-nav {
     top: auto;
-    bottom: -28px;
-    width: 52px;
-    height: 52px;
+    bottom: -26px;
+    width: 50px;
+    height: 50px;
   }
 
   .testimonial-prev {
-    left: calc(50% - 70px);
+    left: calc(50% - 64px);
   }
 
   .testimonial-next {
-    right: calc(50% - 70px);
-  }
-
-  /* Contact: form và hình minh họa chiếm toàn bộ chiều rộng khả dụng. */
-  .contact-header {
-    margin-bottom: 42px;
+    right: calc(50% - 64px);
   }
 
   .contact-info,
@@ -366,52 +544,53 @@
 
   .contact-description {
     max-width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .contact-list {
-    margin-bottom: 42px;
+    margin-bottom: 36px;
   }
 
   .contact-visual {
     width: 100%;
-    max-width: 576px;
-    height: 300px;
+    max-width: 100%;
+    height: 280px;
     margin-left: 0;
   }
 
   .contact-image-small {
-    top: 48px;
-    width: 52%;
-    height: 160px;
+    top: 42px;
+    width: 54%;
+    height: 145px;
   }
 
   .contact-image-large {
     width: 78%;
-    height: 190px;
+    height: 180px;
   }
 
   .contact-accent {
-    left: 52%;
+    left: 50%;
   }
 
   .contact-accent-dark {
-    left: calc(52% + 48px);
+    left: calc(50% + 42px);
   }
 
   .contact-form {
     min-height: auto;
-    padding: 32px 20px;
+    padding: 28px 18px;
   }
 
   .contact-form h3 {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
-  /* Footer: chia một cột trên SP để các cột link và newsletter không bị ép ngang. */
   .footer-container,
   .footer-bottom {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .footer-brand,
@@ -426,14 +605,12 @@
 
   .footer-bottom {
     padding-left: 0;
-    column-gap: 0;
   }
 }
 
 @media (max-width: 480px) {
-  /* Smartphone nhỏ: giảm font và khoảng cách để nội dung không bị cắt. */
   .container {
-    width: min(100% - 24px, 100%);
+    width: calc(100% - 24px);
   }
 
   .top-bar {
@@ -442,53 +619,56 @@
   }
 
   .logo img {
-    width: 150px;
+    width: 135px;
+  }
+
+  .nav-links {
+    gap: 8px 14px;
   }
 
   .nav-links a,
   .login-link {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 20px;
   }
 
   .signup-btn {
-    width: 112px;
-    height: 46px;
-    font-size: 15px;
-  }
-
-  .hero-inner {
-    padding-block: 40px 56px;
-  }
-
-  .hero-content h1 {
-    font-size: 34px;
-    line-height: 42px;
-  }
-
-  .hero-visual {
-    height: 280px;
-  }
-
-  .how-it-works {
-    width: 150px;
-    height: 56px;
-  }
-
-  .how-it-works > span:first-child {
-    left: 14px;
-    top: 18px;
+    width: 104px;
+    height: 42px;
     font-size: 13px;
   }
 
-  .play-icon {
-    width: 48px;
-    height: 48px;
+  .hero-inner {
+    padding: 36px 0 56px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .hero-visual {
+    height: 260px;
   }
 
   .revenue-card {
-    width: 158px;
-    height: 112px;
+    width: 145px;
+    padding: 12px;
+  }
+
+  .how-it-works {
+    width: 135px;
+    height: 52px;
+  }
+
+  .play-icon {
+    width: 44px;
+    height: 44px;
   }
 
   .guide-heading h2,
@@ -501,106 +681,58 @@
   .blog-header h2,
   .contact-header h2,
   .contact-form h3 {
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 36px;
   }
 
   .about-media {
-    height: 360px;
-  }
-
-  .about-image-back {
-    width: 200px;
-    height: 310px;
-  }
-
-  .about-image-front {
-    left: 58px;
-    width: 210px;
     height: 330px;
   }
 
+  .about-image-back {
+    width: 185px;
+    height: 285px;
+  }
+
+  .about-image-front {
+    left: 52px;
+    width: 200px;
+    height: 305px;
+  }
+
   .rating-card {
-    width: 88px;
-    height: 88px;
+    width: 80px;
+    height: 80px;
   }
 
-  .today-slider {
-    height: 86px;
-  }
-
-  .today-preview-large {
-    width: 102px;
-    height: 86px;
-  }
-
-  .today-preview-medium {
-    left: 102px;
-    top: 18px;
-    width: 94px;
-    height: 68px;
-  }
-
-  .today-preview-small {
-    left: 196px;
-    top: 30px;
-    width: 76px;
-    height: 56px;
-  }
-
-  .today-slider-control {
-    gap: 12px;
-  }
-
-  .today-slider-line {
-    width: 48px;
+  .today-images {
+    grid-template-rows: repeat(3, 190px);
   }
 
   .unit-card {
-    align-items: flex-start;
-    width: min(100%, 340px);
-    padding: 14px;
+    max-width: 320px;
   }
 
   .unit-image-wrap {
-    width: 86px;
-    height: 86px;
-    flex-basis: 86px;
-  }
-
-  .unit-info {
-    margin-left: 14px;
+    width: 76px;
+    height: 76px;
+    flex-basis: 76px;
   }
 
   .unit-info strong {
-    font-size: 24px;
-    line-height: 34px;
-  }
-
-  .unit-meta {
-    gap: 8px;
-  }
-
-  .unit-meta-icon {
-    width: 28px;
-    height: 28px;
-    flex-basis: 28px;
-  }
-
-  .testimonial-text {
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .subscribe-form {
-    padding: 18px;
-  }
-
-  .subscribe-input input {
-    font-size: 16px;
+    font-size: 22px;
+    line-height: 30px;
   }
 
   .blog-content {
-    padding: 28px 18px 22px;
+    padding: 24px 16px 20px;
+  }
+
+  .subscribe-form {
+    padding: 16px;
+  }
+
+  .subscribe-input input {
+    font-size: 15px;
   }
 }

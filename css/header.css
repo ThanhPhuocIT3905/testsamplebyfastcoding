@@ -1,5 +1,10 @@
 /* Header */
 /* File này chứa style cho top bar và thanh điều hướng chính. */
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 .top-bar {
   height: 48px;
@@ -100,6 +105,17 @@
   line-height: 27px;
   font-weight: 600;
   white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+/* Navbar interaction: hover đổi màu cam, click sẽ được JS thêm class active để hiện gạch dưới. */
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #ff5a3c;
+}
+
+.nav-links a:focus-visible {
+  outline: none;
 }
 
 .nav-links a.active {
@@ -143,7 +159,15 @@
   line-height: 27px;
   font-weight: 600;
   white-space: nowrap;
+  transition: color 0.25s ease;
 }
 
+.mobile-toggle {
+  display: none;
+}
 
-
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
