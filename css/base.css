@@ -1,5 +1,5 @@
-/* Base styles and shared helpers */
-/* This file contains styles for the Base styles and shared helpers area of the landing page. */
+/* Style nền và thành phần dùng chung */
+/* File này chứa reset, container và các helper dùng chung cho toàn trang. */
 
 * {
   box-sizing: border-box;

@@ -1,8 +1,7 @@
 /*
- * Main stylesheet has been split by page section.
- * Link the smaller files from index.html in this order:
- * base, header, hero, guide, about, today, services, featured,
- * unit, testimonial, projects, blog, contact, footer.
+ * File CSS chính.
+ * File này import toàn bộ CSS theo đúng thứ tự hiển thị của trang.
+ * Cách này giúp index.html gọn hơn nhưng CSS vẫn được tách theo từng section để dễ bảo trì.
  */
 
 @import url("./base.css");
@@ -19,3 +18,4 @@
 @import url("./blog.css");
 @import url("./contact.css");
 @import url("./footer.css");
+
