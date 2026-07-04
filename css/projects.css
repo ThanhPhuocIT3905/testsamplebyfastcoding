@@ -1,0 +1,189 @@
+/* Projects CTA section */
+/* This file contains styles for the Projects CTA section area of the landing page. */
+
+/* Projects CTA section */
+.projects-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 84px 24px;
+}
+
+.projects-container {
+    max-width: 1440px;
+    min-height: 482px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-container h2 {
+    max-width: 544px;
+    margin: 0 auto 52px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.22;
+    letter-spacing: -0.015em;
+    color: #071c1f;
+}
+
+.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 170px;
+    padding: 28px 20px 31px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #c4c4c4;
+    border-radius: 10px;
+}
+
+.project-card-featured {
+    margin-top: -7px;
+    box-shadow: 0 30px 120px -26px rgba(0, 0, 0, 0.09);
+}
+
+.project-card h3 {
+    margin: 0 0 43px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.35;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+}
+
+.project-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 140px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px -10px rgba(238, 42, 82, 0.25);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+    letter-spacing: -0.01em;
+    color: #ff5a3c;
+    text-decoration: none;
+}
+
+.project-card a span {
+    font-size: 28px;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(610px, 100%);
+    height: 80px;
+    margin: 0 auto;
+    padding: 12px 12px 12px 30px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.subscribe-input {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    flex: 1;
+}
+
+.subscribe-input img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+.subscribe-input input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #071c1f;
+}
+
+.subscribe-input input::placeholder {
+    color: rgba(140, 140, 140, 0.5);
+}
+
+.subscribe-form button {
+    width: 152px;
+    height: 56px;
+    border: 0;
+    border-radius: 10px;
+    background: #ff5a3c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+@media (max-width: 1120px) {
+    .projects-cards {
+        grid-template-columns: repeat(2, 330px);
+    }
+
+    .project-card-featured {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .projects-section {
+        padding: 72px 16px;
+    }
+
+    .projects-container h2 {
+        font-size: 36px;
+    }
+
+    .projects-cards {
+        grid-template-columns: minmax(0, 330px);
+        gap: 22px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .subscribe-form {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+

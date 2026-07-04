@@ -1,0 +1,241 @@
+/* Unit No. 9A section */
+/* This file contains styles for the Unit No. 9A section area of the landing page. */
+
+/* Unit section */
+.unit-section {
+    width: 100%;
+    background: #ffffff;
+}
+
+.unit-background {
+    position: relative;
+    height: 509px;
+    background: #c4c4c4;
+}
+
+.unit-background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background: #ffffff;
+}
+
+.unit-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1172px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.unit-card {
+    position: absolute;
+    top: 155px;
+    left: 247px;
+    display: flex;
+    align-items: center;
+    width: 380px;
+    height: 150px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: -10px 14px 34px rgba(60, 80, 224, 0.09);
+}
+
+.unit-image-wrap {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    flex: 0 0 110px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 8px 14px rgba(43, 108, 60, 0.1);
+}
+
+.unit-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.unit-coin {
+    position: absolute;
+    left: 13px;
+    bottom: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    background: #ff5a3c;
+    border: 3px solid #ff5a3c;
+    border-radius: 50%;
+}
+
+.unit-coin img {
+    display: block;
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
+
+.unit-info {
+    min-width: 0;
+    margin-left: 25px;
+}
+
+.unit-info strong {
+    display: block;
+    margin-bottom: 1px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    color: #071c1f;
+}
+
+.unit-info p {
+    margin: 0 0 7px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #6d7781;
+}
+
+.unit-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.unit-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #627193;
+}
+
+.unit-meta span:last-child {
+    color: #6d7781;
+}
+
+.unit-meta-icon {
+    display: grid !important;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    background: rgba(255, 90, 60, 0.2);
+    border-radius: 50%;
+}
+
+.unit-meta-icon img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.unit-badge {
+    position: absolute;
+    left: 44px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    padding-top: 4px;
+    background: #ff5a3c;
+    border-radius: 50%;
+    color: #ffffff;
+    transform: translateY(-9px);
+}
+
+.unit-badge span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+}
+
+.unit-badge strong {
+    margin-top: -1px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+}
+
+@media (max-width: 1024px) {
+    .unit-card {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .unit-badge {
+        left: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .unit-background {
+        height: 440px;
+    }
+
+    .unit-card {
+        top: 120px;
+        width: min(340px, calc(100% - 32px));
+        height: auto;
+        padding: 16px;
+    }
+
+    .unit-image-wrap {
+        width: 92px;
+        height: 92px;
+        flex-basis: 92px;
+    }
+
+    .unit-info {
+        margin-left: 16px;
+    }
+
+    .unit-info strong {
+        font-size: 25px;
+    }
+
+    .unit-meta {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .unit-badge {
+        width: 100px;
+        height: 100px;
+    }
+
+    .unit-badge span {
+        font-size: 15px;
+    }
+
+    .unit-badge strong {
+        font-size: 28px;
+    }
+}
+
+

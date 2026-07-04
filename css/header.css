@@ -1,0 +1,149 @@
+/* Top bar and navigation header */
+/* This file contains styles for the Top bar and navigation header area of the landing page. */
+
+.top-bar {
+  height: 48px;
+  color: #ffffff;
+  background: #071c1f;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Poppins", sans-serif;
+}
+
+.top-bar-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar-info {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.email-info,
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.email-info p,
+.location-info p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.email-info img {
+  width: 20px;
+  height: 19px;
+}
+
+.location-info img {
+  width: 17px;
+  height: 17px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: auto;
+  height: 17px;
+  display: block;
+}
+
+.navbar {
+  height: 80px;
+  background: #ffffff;
+}
+
+.navbar-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 172px;
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-left: auto;
+}
+
+.nav-links a,
+.login-link {
+  position: relative;
+  color: #233638;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-links a.active {
+  color: #ff5a3c;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 49px;
+  height: 1px;
+  background: #ff5a3c;
+  transform: translateX(-50%);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-shrink: 0;
+}
+
+.login-link {
+  color: #071c1f;
+}
+
+.signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 53px;
+  border-radius: 10px;
+  background: #ff5a3c;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+

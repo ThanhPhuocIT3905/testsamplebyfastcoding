@@ -1,0 +1,248 @@
+/* About section */
+/* This file contains styles for the About / Dream Living Spaces section. */
+
+.about-section {
+  padding: 10px 0 120px;
+  background: #ffffff;
+}
+
+.about-container {
+  width: min(100% - 32px, 1195px);
+  min-height: 670px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 570px 567px;
+  align-items: start;
+  gap: 58px;
+}
+
+.about-media {
+  position: relative;
+  height: 670px;
+}
+
+.about-image {
+  position: absolute;
+  background: #c4c4c4 center / cover no-repeat;
+}
+
+.about-image-back {
+  left: 0;
+  bottom: 0;
+  width: 342px;
+  height: 527px;
+  background-image: url("../assets/images/about-back.jpg");
+}
+
+.about-image-front {
+  left: 128px;
+  top: 42px;
+  width: 366px;
+  height: 561px;
+  background-image: url("../assets/images/about-front.jpg");
+}
+
+.rating-card {
+  position: absolute;
+  top: 31px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  background: #071c1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.rating-card img {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.rating-card span {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.about-content {
+  padding-top: 0;
+}
+
+.about-content h2 {
+  width: 567px;
+  margin: 0 0 26px;
+  color: #071c1f;
+  font-family: "Nunito", sans-serif;
+  font-size: 46px;
+  line-height: 56px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-transform: capitalize;
+}
+
+.about-lead {
+  width: 392px;
+  margin: 0 0 60px;
+  color: #899aa2;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.about-feature {
+  position: relative;
+  display: grid;
+  grid-template-columns: 51px 1fr;
+  column-gap: 16px;
+  align-items: start;
+}
+
+.about-feature img {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+  display: block;
+  justify-self: center;
+}
+
+.about-feature:nth-child(1) img {
+  margin-top: -3px;
+}
+
+.about-feature-highlight img {
+  width: 50px;
+  height: 49px;
+  margin-top: 8px;
+}
+
+.about-feature:nth-child(3) img {
+  width: 51px;
+  height: 52px;
+}
+
+.about-feature h3 {
+  margin: 0 0 6px;
+  color: #071c1f;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.about-feature p {
+  width: min(100%, 335px);
+  margin: 0;
+  color: #899aa2;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.about-feature-highlight {
+  width: 407px;
+  min-height: 128px;
+  padding: 29px 22px 29px 28px;
+  margin-left: 0;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0 0 80px rgba(203, 203, 203, 0.25);
+}
+
+@media (max-width: 1200px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .about-media {
+    width: min(100%, 570px);
+    margin-inline: auto;
+  }
+
+  .about-content {
+    width: min(100%, 567px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 72px 0;
+  }
+
+  .about-media {
+    height: 460px;
+  }
+
+  .about-image-back {
+    width: 260px;
+    height: 400px;
+  }
+
+  .about-image-front {
+    left: 82px;
+    width: 260px;
+    height: 420px;
+  }
+
+  .rating-card {
+    right: 8px;
+  }
+
+  .about-content h2 {
+    width: 100%;
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .about-lead {
+    width: 100%;
+  }
+
+  .about-feature-highlight {
+    width: 100%;
+  }
+}
+
+
+
+/* About feature alignment fix */
+.about-feature-highlight {
+    width: 433px;
+    min-height: 136px;
+    margin-left: -24px;
+    padding: 29px 22px 29px 24px;
+    grid-template-columns: 51px 1fr;
+    column-gap: 16px;
+}
+
+.about-feature-highlight img {
+    width: 51px;
+    height: 51px;
+    margin-top: 0;
+    justify-self: center;
+}
+
+@media (max-width: 768px) {
+    .about-feature-highlight {
+        width: 100%;
+        margin-left: 0;
+    }
+}

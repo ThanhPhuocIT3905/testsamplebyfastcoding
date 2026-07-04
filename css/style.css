@@ -1,7 +1,21 @@
-@import url("./reset.css");
-@import url("./variables.css");
+/*
+ * Main stylesheet has been split by page section.
+ * Link the smaller files from index.html in this order:
+ * base, header, hero, guide, about, today, services, featured,
+ * unit, testimonial, projects, blog, contact, footer.
+ */
+
 @import url("./base.css");
-@import url("./layout.css");
-@import url("./components.css");
-@import url("./sections.css");
-@import url("./responsive.css");
+@import url("./header.css");
+@import url("./hero.css");
+@import url("./guide.css");
+@import url("./about.css");
+@import url("./today.css");
+@import url("./services.css");
+@import url("./featured.css");
+@import url("./unit.css");
+@import url("./testimonial.css");
+@import url("./projects.css");
+@import url("./blog.css");
+@import url("./contact.css");
+@import url("./footer.css");

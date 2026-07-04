@@ -1,0 +1,244 @@
+/* Footer section */
+/* This file contains styles for the Footer section area of the landing page. */
+
+/* Footer */
+.site-footer {
+    position: relative;
+    width: 100%;
+    min-height: 502px;
+    padding: 70px 24px 64px;
+    background: #171b2a;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 240px 120px 130px 105px 326px;
+    column-gap: 48px;
+    row-gap: 42px;
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: inline-flex;
+    margin-bottom: 28px;
+}
+
+.footer-logo img {
+    display: block;
+    width: 147px;
+    height: auto;
+}
+
+.footer-brand p {
+    max-width: 234px;
+    margin: 0 0 31px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.89;
+    letter-spacing: -0.01em;
+    color: #c4c4c4;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-socials a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    text-decoration: none;
+}
+
+.footer-socials img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.footer-column h3,
+.footer-office h3,
+.footer-newsletter label {
+    display: block;
+    margin: 0 0 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #ffffff;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    margin-bottom: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+
+.footer-address {
+    margin-bottom: 41px;
+}
+
+.footer-address p {
+    max-width: 302px;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-newsletter label {
+    margin-bottom: 31px;
+}
+
+.footer-newsletter-input {
+    display: flex;
+    align-items: center;
+    width: 326px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(77, 105, 175, 0.25);
+}
+
+.footer-newsletter-input input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #a6b2d3;
+}
+
+.footer-newsletter-input input::placeholder {
+    color: rgba(166, 178, 211, 0.7);
+}
+
+.footer-newsletter-input button {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.footer-newsletter-input img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 149px 132px 1fr;
+    align-items: start;
+    column-gap: 230px;
+    margin-top: 50px;
+    padding-left: 104px;
+}
+
+.footer-bottom a {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4d69af;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #a6b2d3;
+    text-decoration: none;
+}
+
+.footer-bottom p {
+    margin: 0;
+    justify-self: end;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    color: rgba(166, 178, 211, 0.6);
+}
+
+.footer-strip {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    background: #ff5a3c;
+}
+
+@media (max-width: 1180px) {
+    .footer-container {
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    }
+
+    .footer-office {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        padding-left: 0;
+        column-gap: 56px;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-footer {
+        padding: 56px 16px 56px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 34px 28px;
+    }
+
+    .footer-brand,
+    .footer-office,
+    .footer-bottom {
+        grid-column: 1 / -1;
+    }
+
+    .footer-newsletter-input {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 24px;
+    }
+
+    .footer-bottom p {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+

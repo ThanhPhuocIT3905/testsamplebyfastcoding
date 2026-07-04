@@ -1,0 +1,145 @@
+/* Services section */
+/* This file contains styles for the Services section area of the landing page. */
+
+/* Services section */
+.services-section {
+    width: 100%;
+    background: #f2f6f7;
+    padding: 104px 24px 100px;
+}
+
+.services-container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.services-header {
+    max-width: 620px;
+    margin: 0 auto 72px;
+    text-align: center;
+}
+
+.services-header h2 {
+    margin: 0 0 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.5;
+    color: #071440;
+}
+
+.services-header p {
+    max-width: 503px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #655f73;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 370px));
+    gap: 29px;
+    justify-content: center;
+}
+
+.service-card {
+    min-height: 355px;
+    padding: 60px 42px 42px;
+    background: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.service-icon {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 58px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 16px 45px -12px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.service-card h3 {
+    margin: 0 0 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.35;
+    color: #071c1f;
+}
+
+.service-card p {
+    max-width: 292px;
+    min-height: 56px;
+    margin: 0 auto 28px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #8c8c8c;
+}
+
+.service-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #071c1f;
+    text-decoration: none;
+}
+
+.service-card a span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 370px));
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 72px 16px;
+    }
+
+    .services-header {
+        margin-bottom: 42px;
+    }
+
+    .services-header h2 {
+        font-size: 34px;
+        line-height: 1.25;
+    }
+
+    .services-grid {
+        grid-template-columns: minmax(0, 370px);
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 42px 24px 34px;
+    }
+
+    .service-icon {
+        margin-bottom: 34px;
+    }
+}
+
